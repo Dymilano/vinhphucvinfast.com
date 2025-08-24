@@ -1,6 +1,6 @@
 # 🚗 VinFast Vĩnh Yên - Full Stack Website
 
-Website clone hoàn chỉnh của [VinFast Vĩnh Yên](https://vinfastvinhyen.vn/) với 100% chức năng frontend và backend.
+Website  hoàn chỉnh của VinFast Vĩnh Yên với 100% chức năng frontend 
 
 ## ✨ Tính năng chính
 
@@ -315,8 +315,9 @@ Dự án này được tạo ra chỉ để học tập và tham khảo. Vui lò
 - ✅ Security features
 
 ---
+Nếu có câu hỏi hoặc góp ý, vui lòng liên hệ qua:
 
-**Tác giả**: AI Assistant  
-**Ngày tạo**: 2025  
-**Phiên bản**: 1.0.0  
-**Trạng thái**: Hoàn thành ✅ 
+Email: nguyenduymilano@gmail.com
+GitHub Issues: https://github.com/Dymilano
+Liên hệ : 0349729139
+
