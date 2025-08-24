@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức VinFast - Cập nhật mới nhất về xe điện VinFast | VinFast Vĩnh Yên Vĩnh Phúc</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    
+    <meta name="description" content="Tin tức mới nhất về VinFast, cập nhật về các dòng xe điện VF3, VF5, VF6, VF7, VF8, VF9, EC VAN và các mẫu xe khác. Đại lý chính hãng tại Vĩnh Yên, Vĩnh Phúc.">
+</head>
+<body>
+    <!-- Floating Contact Buttons -->
+    <div class="floating-buttons">
+        <a href="https://zalo.me/0926666050" class="floating-btn zalo-btn" target="_blank" title="Chat Zalo">
+            <span class="btn-text">Chat Zalo</span>
+        </a>
+        <a href="tel:0926666050" class="floating-btn phone-btn" title="Hotline">
+            <i class="fas fa-phone"></i>
+            <span class="btn-text">Hotline: 092 6666050</span>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo"><a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+    <img src="images/logo-1.png" alt="VinFast Logo" style="width: 180px; height: 60px; object-fit: contain;">
+</a></div>
+                    
+                    <!-- Navigation -->
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Trang Chủ</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link">Ô Tô VinFast <i class="fas fa-chevron-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="ec-van.html">VinFast EC VAN</a></li>
+                                    <li><a href="vf3.html">VinFast VF 3</a></li>
+                                    <li><a href="vf5-plus.html">VinFast VF 5 Plus</a></li>
+                                    <li><a href="vf6.html">VinFast VF 6</a></li>
+                                    <li><a href="vf7.html">VinFast VF 7</a></li>
+                                    <li><a href="vf8-lux.html">VinFast VF 8 Lux</a></li>
+                                    <li><a href="vf9.html">VinFast VF 9</a></li>
+                                    <li><a href="limo-green.html">VinFast Limo Green</a></li>
+                                    <li><a href="minio-green.html">VinFast Minio Green</a></li>
+                                    <li><a href="herio-green.html">VinFast Herio Green</a></li>
+                                    <li><a href="nerio-green.html">VinFast Nerio Green</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="bang-gia.html" class="nav-link">Bảng Giá Ô Tô Điện</a></li>
+                            <li><a href="pin-tram-sac.html" class="nav-link">Pin & Trạm Sạc</a></li>
+                            <li><a href="tin-tuc.html" class="nav-link active">Tin Tức</a></li>
+                            <li><a href="lien-he.html" class="nav-link">Liên Hệ</a></li>
+                            <li class="nav-separator"></li>
+                            <li><a href="#test-drive" class="btn-primary">ĐĂNG KÝ LÁI THỬ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">TIN TỨC VINFAST</h1>
+            <p class="page-subtitle">Cập nhật mới nhất về các dòng xe điện VinFast và thông tin khuyến mãi</p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="news-grid">
+                <!-- Featured News -->
+                <div class="featured-news">
+                    <div class="featured-article" id="featured-article">
+                        <!-- Featured article will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- News Grid -->
+                <div class="news-list" id="news-list">
+                    <!-- News items will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VinFast Vĩnh Yên Vĩnh Phúc</h3>
+                    <p>Đại lý chính hãng VinFast tại Vĩnh Yên, Vĩnh Phúc, cung cấp các dòng xe điện chất lượng cao với dịch vụ tận tâm.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+                    <div class="contact-info-footer">
+                        <p><i class="fas fa-phone"></i> 092 6666050</p>
+                        <p><i class="fas fa-envelope"></i> autovinfast686@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Vĩnh Yên, Vĩnh Phúc</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>FOLLOW</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 DzyMilano. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Support Button -->
+    <div class="support-btn">
+        <i class="fas fa-headset"></i>
+        <span>Hỗ trợ</span>
+    </div>
+
+    <!-- Test Drive Modal -->
+    <div id="test-drive-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <div class="modal-logo-icon">V</div>
+                    <div class="modal-logo-text">VINFAST</div>
+                </div>
+                <div class="modal-title">ĐĂNG KÝ LÁI THỬ XE VINFAST</div>
+                <div class="modal-subtitle">Ngay sau khi nhận được yêu cầu, chúng tôi sẽ liên hệ lại với Quý khách trong thời gian sớm nhất.</div>
+                <div class="modal-car-image">VinFast SUV</div>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="fullname">Họ tên <span class="required">*</span></label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Điện thoại <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email...">
+                </div>
+                <div class="form-group">
+                    <label for="city">Tỉnh/Thành phố</label>
+                    <input type="text" id="city" name="city">
+                </div>
+                <div class="form-group">
+                    <label for="car-model">Dòng xe</label>
+                    <select id="car-model" name="car-model">
+                        <option value="">Chọn dòng xe</option>
+                        <option value="VF 3">VinFast VF 3</option>
+                        <option value="VF 5 Plus">VinFast VF 5 Plus</option>
+                        <option value="VF 6">VinFast VF 6</option>
+                        <option value="VF 7">VinFast VF 7</option>
+                        <option value="VF 8 Lux">VinFast VF 8 Lux</option>
+                        <option value="VF 9">VinFast VF 9</option>
+                        <option value="EC Van">VinFast EC Van</option>
+                        <option value="Limo Green">VinFast Limo Green</option>
+                        <option value="Minio Green">VinFast Minio Green</option>
+                        <option value="Herio Green">VinFast Herio Green</option>
+                        <option value="Nerio Green">VinFast Nerio Green</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">
+                    ĐĂNG KÝ LÁI THỬ NGAY
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html> 
