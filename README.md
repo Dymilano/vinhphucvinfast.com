@@ -1,6 +1,6 @@
-# 🚗 VinFast Vĩnh Yên - Full Stack Website
+# 🚗 VinFast Vĩnh Yên #
 
-Website  hoàn chỉnh của [VinFast Vĩnh Yên] với 100% chức năng frontend và backend.
+Website hoàn chỉnh của [VinFast Vĩnh Yên] 
 
 ## ✨ Tính năng chính
 
@@ -10,25 +10,32 @@ Website  hoàn chỉnh của [VinFast Vĩnh Yên] với 100% chức năng fronte
 - **Hiển thị xe**: Cards hiển thị thông tin các mẫu xe với giá cả
 - **Form báo giá**: Form đăng ký báo giá và lái thử xe
 - **Máy tính giá xe**: Tính toán chi phí lăn bánh và trả góp
+- **Hệ thống tin tức**: Trang tin tức với danh sách và chi tiết bài viết
 - **Responsive**: Tối ưu cho mọi thiết bị (desktop, tablet, mobile)
 - **Animations**: Hiệu ứng hover, scroll và loading
 - **PWA**: Progressive Web App với Service Worker
 
-### 🔧 Backend
-- **Node.js Server**: Express.js với middleware bảo mật
-- **Database**: SQLite với các bảng quản lý dữ liệu
-- **API RESTful**: Đầy đủ các endpoint cho tất cả chức năng
-- **Email Service**: Gửi email xác nhận tự động
-- **File Upload**: Hỗ trợ upload hình ảnh
-- **Validation**: Xác thực dữ liệu đầu vào
-- **Rate Limiting**: Bảo vệ API khỏi spam
-- **Session Management**: Quản lý phiên đăng nhập
 
 ### 📊 Database Schema
 - **Users**: Quản lý người dùng và phân quyền
 - **Car Inquiries**: Lưu trữ yêu cầu báo giá
 - **Test Drives**: Đăng ký lái thử xe
 - **News**: Tin tức và sự kiện
+
+### 🎯 Hệ thống tin tức
+- **Trang tin tức chính**: Hiển thị danh sách tin tức với phân trang
+- **Trang chi tiết tin tức**: Hiển thị nội dung đầy đủ với hình ảnh
+- **Tin tức nổi bật**: Hiển thị tin tức quan trọng ở đầu trang
+- **Tin tức liên quan**: Gợi ý tin tức cùng chủ đề
+- **Chia sẻ mạng xã hội**: Facebook, Twitter, Zala
+- **Thống kê lượt xem**: Theo dõi số lượt đọc bài viết
+
+### 🔐 Admin Panel
+- **Quản lý tin tức**: Thêm, sửa, xóa, xuất bản tin tức
+- **Quản lý xe**: Cập nhật thông tin và giá cả xe
+- **Quản lý nội dung**: Upload và quản lý hình ảnh
+- **Dashboard**: Thống kê tổng quan hệ thống
+- **Quản lý yêu cầu**: Xử lý báo giá và lái thử xe
 
 ## 🚀 Cài đặt và chạy
 
@@ -84,12 +91,43 @@ vinfast-fullstack/
 ├── database.sqlite          # Database SQLite
 ├── public/                  # Frontend files
 │   ├── index.html          # Trang chính
+│   ├── tin-tuc.html        # Trang tin tức
+│   ├── tin-tuc-chi-tiet.html # Trang chi tiết tin tức
 │   ├── css/
-│   │   └── style.css       # Stylesheet chính
+│   │   ├── style.css       # Stylesheet chính
+│   │   ├── news.css        # Styles cho trang tin tức
+│   │   ├── car-detail.css  # Styles cho trang chi tiết xe
+│   │   ├── lien-he.css     # Styles cho trang liên hệ
+│   │   ├── pin-tram-sac.css # Styles cho trang pin trạm sạc
+│   │   └── price-list.css  # Styles cho trang bảng giá
 │   ├── js/
-│   │   └── app.js          # JavaScript chính
+│   │   ├── app.js          # JavaScript chính
+│   │   ├── news.js         # Quản lý tin tức
+│   │   ├── news-detail.js  # Chi tiết tin tức
+│   │   ├── car-detail.js   # Chi tiết xe
+│   │   └── [other-js-files] # Các file JS khác
 │   └── images/             # Hình ảnh
-├── uploads/                 # Thư mục upload files
+│       ├── vf3/            # Hình ảnh VF 3
+│       ├── vf5-plus/       # Hình ảnh VF 5 Plus
+│       ├── vf6/            # Hình ảnh VF 6
+│       ├── vf7/            # Hình ảnh VF 7
+│       ├── vf8-lux/        # Hình ảnh VF 8 Lux
+│       ├── vf9/            # Hình ảnh VF 9
+│       ├── ec-van/         # Hình ảnh EC Van
+│       ├── herio-green/     # Hình ảnh Herio Green
+│       ├── limo-green/     # Hình ảnh Limo Green
+│       ├── minio-green/    # Hình ảnh Minio Green
+│       └── nerio-green/    # Hình ảnh Nerio Green
+├── admin/                   # Admin Panel
+│   ├── index.html          # Trang admin chính
+│   ├── css/
+│   │   └── admin.css       # Styles cho admin panel
+│   ├── js/
+│   │   ├── admin.js        # JavaScript chính cho admin
+│   │   ├── content-manager.js # Quản lý nội dung và tin tức
+│   │   ├── car-manager.js  # Quản lý xe
+│   │   └── image-manager.js # Quản lý hình ảnh
+│   └── README.md           # Hướng dẫn admin panel
 └── README.md               # Hướng dẫn này
 ```
 
@@ -98,6 +136,7 @@ vinfast-fullstack/
 ### Public APIs
 - `GET /api/cars` - Lấy danh sách xe
 - `GET /api/news` - Lấy tin tức
+- `GET /api/news/:id` - Lấy chi tiết tin tức
 - `POST /api/inquiry` - Gửi yêu cầu báo giá
 - `POST /api/test-drive` - Đăng ký lái thử
 - `POST /api/calculate-price` - Tính toán giá xe
@@ -105,6 +144,10 @@ vinfast-fullstack/
 
 ### Admin APIs (Protected)
 - `GET /api/admin/dashboard` - Thống kê tổng quan
+- `GET /api/admin/news` - Danh sách tin tức
+- `POST /api/admin/news` - Tạo tin tức mới
+- `PUT /api/admin/news/:id` - Cập nhật tin tức
+- `DELETE /api/admin/news/:id` - Xóa tin tức
 - `GET /api/admin/inquiries` - Danh sách yêu cầu báo giá
 - `GET /api/admin/test-drives` - Danh sách đăng ký lái thử
 - `PUT /api/admin/inquiries/:id` - Cập nhật trạng thái yêu cầu
@@ -126,7 +169,7 @@ vinfast-fullstack/
 ### Frontend
 - **HTML5**: Semantic markup
 - **CSS3**: Grid, Flexbox, Animations, Media Queries
-- **JavaScript ES6+**: Classes, Async/Await, Fetch API
+- **JavaScript ES6+**: Classes, Async/Await, Fetch API, LocalStorage
 - **Font Awesome**: Icons
 - **PWA**: Service Worker, Manifest
 
@@ -146,6 +189,11 @@ vinfast-fullstack/
 - **Sass**: CSS preprocessor
 - **Webpack**: JavaScript bundler
 
+### Data Storage
+- **LocalStorage**: Lưu trữ tin tức và cài đặt (client-side)
+- **SQLite**: Database chính cho backend
+- **File System**: Lưu trữ hình ảnh và tài liệu
+
 ## 📱 Responsive Design
 
 ### Breakpoints
@@ -158,6 +206,7 @@ vinfast-fullstack/
 - Touch-friendly interface
 - Optimized for all screen sizes
 - Progressive enhancement
+- Responsive images và typography
 
 ## 🔒 Bảo mật
 
@@ -211,13 +260,15 @@ CMD ["npm", "start"]
 - **Compression**: Gzip compression
 - **Caching**: Static file caching
 - **Minification**: CSS/JS minification
-- **Image Optimization**: WebP support
+- **Image Optimization**: WebP support, responsive images
 - **Lazy Loading**: Intersection Observer
+- **LocalStorage**: Client-side caching cho tin tức
 
 ### Monitoring
 - **Morgan**: HTTP request logging
 - **Performance API**: Page load metrics
 - **Error Tracking**: Global error handler
+- **View Counter**: Thống kê lượt xem tin tức
 
 ## 🧪 Testing
 
@@ -257,6 +308,22 @@ Cập nhật `server.js` trong `getDefaultCarModels()`:
 }
 ```
 
+### Thêm tin tức mới
+Sử dụng Admin Panel hoặc cập nhật trực tiếp trong `localStorage`:
+```javascript
+const news = {
+    id: "new-article-id",
+    title: "Tiêu đề tin tức mới",
+    summary: "Tóm tắt tin tức",
+    content: "Nội dung chi tiết...",
+    image: "images/news/new-article.jpg",
+    category: "Sự kiện",
+    status: "published",
+    views: 0,
+    createdAt: new Date().toISOString()
+};
+```
+
 ### Thay đổi API endpoints
 Chỉnh sửa `server.js` và `public/js/app.js`
 
@@ -291,6 +358,16 @@ npm run dev
 - Kiểm tra cấu hình CORS trong `server.js`
 - Đảm bảo frontend và backend cùng domain
 
+#### 5. Tin tức không hiển thị
+- Kiểm tra dữ liệu trong localStorage
+- Đảm bảo file `news.js` và `news-detail.js` được load đúng
+- Kiểm tra console để xem lỗi JavaScript
+
+#### 6. Admin panel không hoạt động
+- Kiểm tra file `content-manager.js` và `admin.js`
+- Đảm bảo tất cả dependencies được load
+- Kiểm tra quyền truy cập admin
+
 ## 📄 License
 
 Dự án này được tạo ra chỉ để học tập và tham khảo. Vui lòng tôn trọng bản quyền của VinFast và website gốc.
@@ -305,6 +382,15 @@ Dự án này được tạo ra chỉ để học tập và tham khảo. Vui lò
 
 ## 📝 Changelog
 
+### Version 1.1.0 (2025-01-XX)
+- ✅ Hệ thống tin tức hoàn chỉnh
+- ✅ Trang chi tiết tin tức với responsive design
+- ✅ Admin panel quản lý tin tức (CRUD)
+- ✅ Chia sẻ mạng xã hội
+- ✅ Thống kê lượt xem tin tức
+- ✅ Tin tức liên quan và nổi bật
+- ✅ Quản lý trạng thái tin tức (draft/published)
+
 ### Version 1.0.0 (2025-01-XX)
 - ✅ Website hoàn chỉnh với frontend và backend
 - ✅ Tất cả các chức năng chính
@@ -313,6 +399,13 @@ Dự án này được tạo ra chỉ để học tập và tham khảo. Vui lò
 - ✅ Database SQLite
 - ✅ Email service
 - ✅ Security features
+
+---
+
+**Tác giả**: AI Assistant  
+**Ngày tạo**: 2025  
+**Phiên bản**: 1.1.0  
+**Trạng thái**: Hoàn thành ✅ 
 
 ---
 #
