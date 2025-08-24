@@ -315,8 +315,8 @@ Dự án này được tạo ra chỉ để học tập và tham khảo. Vui lò
 - ✅ Security features
 
 ---
-
-**Tác giả**: AI Assistant  
-**Ngày tạo**: 2025  
-**Phiên bản**: 1.0.0  
-**Trạng thái**: Hoàn thành ✅ 
+#
+Nếu có câu hỏi hoặc góp ý, vui lòng liên hệ qua:
+- Email: nguyenduymilano@gmail.com
+- GitHub Issues: https://github.com/Dymilano
+- Liên hệ : 0349729139
